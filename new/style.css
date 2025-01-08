@@ -1,0 +1,560 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4fff4;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+    background: rgba(12, 109, 141, 0.7); /* Light blue background with 70% transparency */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    background: rgba(173, 216, 230, 1); /* Solid light blue on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow effect on hover */
+}
+
+header img {
+    height: 45px; /* Slightly increased size for a modern look */
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1); /* Image enlarges on hover */
+}
+
+/* Bold Text Style */
+header h1, header p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+header h1:hover, header p:hover {
+    color: #f1f1f1; /* Light color on hover for text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    
+    header img {
+        height: 40px; /* Adjust logo size on smaller screens */
+    }
+
+    header h1, header p {
+        font-size: 1.2rem; /* Adjust font size on mobile */
+    }
+}
+
+/* Navigation Style */
+nav {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #0066cc; /* Light blue color on hover */
+    transform: translateY(-4px); /* Slight upward movement */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ffffff, #f0faff); /* Light white background with subtle blue */
+    animation: move-bg 15s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 170, 255, 0.1), transparent 70%); /* Subtle blue glow */
+    animation: pulse 6s ease-in-out infinite;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+    letter-spacing: 1px;
+}
+
+.hero input {
+    padding: 12px;
+    width: 60%;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    background-color: #f8faff;
+}
+
+.hero input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.5); /* Blue glow effect */
+    border-color: #0066cc;
+}
+
+.hero button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #0066cc; /* Light blue background */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #004d99; /* Darker blue on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe Animations */
+@keyframes move-bg {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Courses Section */
+.courses {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    background-color: #fff;
+}
+
+.course {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.course::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 180, 41, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.course:hover::before {
+    opacity: 1;
+}
+
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.course p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.course .description {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Playlists Section */
+.playlists {
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.7), rgba(255, 255, 255, 0.9)); /* Light Blueish White with Transparency */
+    animation: bgColorShift 10s linear infinite;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.playlists h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out, textGlow 1.5s ease-in-out infinite alternate;
+    font-weight: bold; /* Bold Text */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4); /* Neon Glow */
+}
+
+.playlist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    animation: moveUp 2s ease-in-out;
+}
+
+.playlist {
+    background: rgba(249, 249, 249, 0.8); /* Light Grey with Transparency */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist iframe {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.playlist h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    color: black; /* Bold Black Text */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6); /* Neon Glow */
+}
+
+.playlist p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.playlist:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: rgba(173, 216, 230, 0.6); /* Light Blue Hover with Transparency */
+    transition: background 0.5s ease;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes bgColorShift {
+    0% {
+        background: linear-gradient(135deg, rgba(173, 216, 230, 0.7), rgba(255, 255, 255, 0.9));
+    }
+    50% {
+        background: linear-gradient(135deg, rgba(135, 206, 250, 0.8), rgba(173, 216, 230, 0.9));
+    }
+    100% {
+        background: linear-gradient(135deg, rgba(173, 216, 230, 0.7), rgba(255, 255, 255, 0.9));
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.8), 0 0 45px rgba(0, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Roadmaps Section */
+.roadmaps {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.8)); /* White and Light Blue with Transparency */
+    animation: bgColorShift 8s linear infinite;
+}
+
+.roadmaps h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: black; /* Bold Black text */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+    font-weight: bold; /* Bold text */
+}
+
+.roadmap {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(173, 216, 230, 0.6)); /* White and Blue with Transparency */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s, box-shadow 0.5s, background 0.5s;
+    animation: slideUp 1.5s ease-out;
+}
+
+.roadmap:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.9), rgba(135, 206, 250, 0.8)); /* Light Blue Hover with Transparency */
+}
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.2), transparent 70%); /* Light Blue Glow with Transparency */
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: rotateGlow 10s linear infinite;
+}
+
+.roadmap:hover::before {
+    opacity: 1;
+}
+
+.roadmap h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: black; /* Bold Black text */
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: bold; /* Bold text */
+}
+
+.roadmap h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: rgba(0, 191, 255, 0.8); /* Light Blue Accent */
+    border-radius: 10px;
+    animation: widthGrow 1.5s ease-in-out;
+}
+
+.roadmap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: slideIn 1.5s ease-out;
+}
+
+.roadmap li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: black; /* Bold Black text */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+    font-weight: bold; /* Bold text */
+}
+
+.roadmap li::before {
+    content: '✔';
+    color: rgba(0, 191, 255, 0.8); /* Light Blue Checkmark */
+    font-size: 1.2rem;
+    animation: colorPulse 1.5s infinite;
+}
+
+.roadmap li:hover {
+    color: rgba(0, 0, 0, 1); /* Darker Black on Hover */
+}
+
+/* Animations */
+@keyframes bgColorShift {
+    0% {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.8));
+    }
+    50% {
+        background: linear-gradient(135deg, rgba(173, 216, 230, 0.9), rgba(135, 206, 250, 0.8)); /* Blue Gradient */
+    }
+    100% {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.8));
+    }
+}
+
+@keyframes rotateGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes widthGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50px;
+    }
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        color: rgba(0, 191, 255, 0.8); /* Light Blue */
+    }
+    50% {
+        color: rgba(135, 206, 250, 0.8); /* Lighter Blue */
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e6fff5;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
