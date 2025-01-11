@@ -1,102 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSH</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codewithme</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="name.png" alt=" Logo">
-        <nav>
-            <a href="course.html">Courses</a>
-            <a href="page1.html">Tutorials</a>
-            <a href="#">Jobs</a>
-            <a href="sheet.html">Practice</a>
-            <a href="#">Contests</a>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <h1>Hello, What Do You Want To Learn?</h1>
-        <input type="text" id="search-bar" placeholder="Must Do SDE Sheet">
-        <br>
-        <button onclick="search()">Search</button>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="emoji">🧑‍💻</span> 
+      <span>Codewithme</span>
     </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="c1.html">Courses</a></li>
+        <li><a href="#">Live Course</a></li>
+        <li><a href="#">Request Callback</a></li>
+        <li><button class="signin-btn">Sign In</button></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="courses" id="courses">
-        <div class="course">
-            <h3>DSA to Development: A Complete Guide</h3>
-            <p>Beginner to Advance</p>
-            <p class="description">This course provides a comprehensive guide to data structures, algorithms, and their implementation in real-world projects.</p>
-        </div>
-        <div class="course">
-            <h3>JAVA Backend Development - Live</h3>
-            <p>Intermediate to Advance</p>
-            <p class="description">Master backend development using Java with live sessions, industry projects, and expert guidance.</p>
-        </div>
-        <div class="course">
-            <h3>Tech Interview 101 - From DSA to System Design</h3>
-            <p>Beginner to Advance</p>
-            <p class="description">Prepare for technical interviews with this course covering DSA, system design, and real interview scenarios.</p>
-        </div>
-    </section>
-    <section class="playlists">
-        <h2>Recommended YouTube Playlists</h2>
-        <div class="playlist-container">
-            <div class="playlist">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/WQoB2z67hvY" title="Playlist 1"></iframe>
-                <h3>DSA Basics</h3>
-                <p>Learn all the fundamental concepts of DSA from scratch.</p>
-            </div>
-            <div class="playlist">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/ciHThtTVNto" title="Playlist 2"></iframe>
-                <h3>System Design</h3>
-                <p>Understand how to design scalable and reliable systems.</p>
-            </div>
-            <div class="playlist">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/YXcgD8hRHYY" title="Playlist 3"></iframe>
-                <h3>Java Backend Development</h3>
-                <p>Master Java for backend with this detailed guide.</p>
-            </div>
-        </div>
-    </section>
+ <!-- Hero Section -->
+<main class="hero-section">
+    <h1 class="fade-in">
+      We only <span class="highlight">teach</span> what we are really <span class="highlight">really good at.</span>
+    </h1>
+    <p class="fade-in-delay">
+      Get ready to <span class="highlight">accelerate your career</span> with customized courses and leave your mark in the tech industry.
+    </p>
+    <!-- Anchor tag used for navigation -->
+    <a href="c1.html" target="_blank">
+      <button class="cta-btn bounce">Check Courses - Make an Impact</button>
+    </a>
+  </main>
+  
+
+  <!-- Coding Roadmaps Section -->
+  <!-- Coding Roadmaps Section -->
+<section class="roadmaps-section">
+    <h2>Coding Roadmaps</h2>
+    <p>Embark on your journey to becoming a top-notch developer with our expertly designed roadmaps!</p>
     
+    <div class="roadmap-container">
+      <div class="roadmap-card">
+        <h3>Frontend Developer</h3>
+        <ul>
+          <li>Understand HTML, CSS, and JavaScript.</li>
+          <li>Learn frameworks like React, Angular, or Vue.</li>
+          <li>Master responsive design and accessibility.</li>
+          <li>Build dynamic, user-friendly websites.</li>
+        </ul>
+        <button class="roadmap-btn">Learn More</button>
+      </div>
+      
+      <div class="roadmap-card">
+        <h3>Backend Developer</h3>
+        <ul>
+          <li>Master server-side languages like Node.js or Python.</li>
+          <li>Learn about RESTful APIs and GraphQL.</li>
+          <li>Work with databases like MongoDB and SQL.</li>
+          <li>Focus on performance, security, and scalability.</li>
+        </ul>
+        <button class="roadmap-btn">Learn More</button>
+      </div>
+      
+      <div class="roadmap-card">
+        <h3>Full Stack Developer</h3>
+        <ul>
+          <li>Combine frontend and backend development skills.</li>
+          <li>Understand DevOps and deployment processes.</li>
+          <li>Work on end-to-end projects for real-world applications.</li>
+          <li>Become a versatile and in-demand developer.</li>
+        </ul>
+        <button class="roadmap-btn">Learn More</button>
+      </div>
+    </div>
+  </section>
+  
 
-    <section class="roadmaps" id="roadmaps">
-        <h2>Roadmaps for Various Courses</h2>
-        <div class="roadmap">
-            <h3>Roadmap for DSA</h3>
-            <ul>
-                <li>Step 1: Learn Basic Data Structures</li>
-                <li>Step 2: Practice Sorting and Searching Algorithms</li>
-                <li>Step 3: Solve 100+ Problems on Dynamic Programming</li>
-            </ul>
-        </div>
-        <div class="roadmap">
-            <h3>Roadmap for Backend Development</h3>
-            <ul>
-                <li>Step 1: Learn Core Java</li>
-                <li>Step 2: Master Spring Boot Framework</li>
-                <li>Step 3: Build REST APIs and Microservices</li>
-            </ul>
-        </div>
-        <div class="roadmap">
-            <h3>Roadmap for System Design</h3>
-            <ul>
-                <li>Step 1: Understand Basic Design Patterns</li>
-                <li>Step 2: Learn Scalability Concepts</li>
-                <li>Step 3: Design Real-World Systems</li>
-            </ul>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 . All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
 
-    <footer class="footer">
-        <p>&copy; 2025 JSH All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
